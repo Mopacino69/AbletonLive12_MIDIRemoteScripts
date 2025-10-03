@@ -193,6 +193,7 @@ class Launchpad_Pro_MK3(InstrumentControlMixin, NovationBase):
           layer=Layer(fixed_length_button="fixed_length_button"))
         self._fixed_length.settings_component.layer = Layer(length_option_buttons="track_select_buttons")
         self._fixed_length.set_enabled(True)
+     self._fixed_length._length_values = [1, 2, 4, 8, 12, 16, 24, 32]
 
     def _create_drum_group(self):
         self._drum_group = DrumGroupComponent((self._clip_actions),
